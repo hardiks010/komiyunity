@@ -1,0 +1,5 @@
+# Firebase service account key file
+backend/firebase-service-account.json
+
+# Firebase config environment files
+backend/.env
