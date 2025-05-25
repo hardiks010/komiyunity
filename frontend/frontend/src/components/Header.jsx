@@ -1,9 +1,8 @@
-// komiyunity/frontend/src/components/Header.jsx
 import React from 'react';
 
 function Header() {
   return (
-    <header className="bg-white/10 backdrop-blur-sm text-white p-4 shadow-xl border-b border-white/20 z-10"> {/* Translucent, blurred, sharper shadow, subtle border */}
+    <header className="bg-white/10 backdrop-blur-sm text-white p-4 shadow-xl border-b border-white/20 z-10"> 
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">Komiyunity</h1>
         <nav>
