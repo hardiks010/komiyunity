@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 
 // Import your components
 import LoginPage from './components/LoginPage';
-import HomePage from './components/HomePage'; // <-- NEW: Import HomePage
-import ChatRoom from './ChatRoom'; // Assuming ChatRoom.jsx is directly in src/
+import HomePage from './components/HomePage';
+import ChatRoom from './ChatRoom'; // Corrected import path for ChatRoom
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -74,12 +74,12 @@ function App() {
           />
 
           {/*
-            MODIFIED: Route for a specific chatroom ('/chatroom/:roomName').
-            It now accepts a dynamic roomName parameter.
+            MODIFIED: Route for a specific chatroom ('/chat/:roomId').
+            It now accepts a dynamic roomId parameter.
             Requires login. If not logged in, navigates to '/'.
           */}
           <Route
-            path="/chatroom/:roomName" // <-- Changed to accept a parameter
+            path="/chat/:roomId" // Changed from /chatroom/:roomName to match HomePage's navigate(`/chat/${roomId}`)
             element={isLoggedIn ? <ChatRoom onLogout={handleLogout} /> : <Navigate to="/" replace />}
           />
 
